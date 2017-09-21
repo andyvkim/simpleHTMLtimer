@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <meta charset="UTF-8">
+ <script  src="js/index.js"></script>
+<link href = "animate.css" rel="stylesheet">
+<style type = "text/css">
+html{
+    background-image: url('assets/video_background.png');
+}
+
+img{
+    display: block;
+    margin: auto;
+}
+
+.clock{
+    color:white;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 500%;
+    height:100%;
+    width:100%;
+    --animation-duration: 1s;
+    --animation-delay: 28s;
+  --animation-iteration-count: 10;
+  -webkit-animation-duration: 1s;
+  -webkit-animation-delay: 25s;
+ -webkit-animation-iteration-count: 10;
+    
+}
+
+.fade-in {
+  opacity:0;
+  opacity: 1 \9; /*just in case ie*/
+  -webkit-animation:fadeIn ease-in 1;
+  -moz-animation:fadeIn ease-in 1;
+  animation:fadeIn ease-in 1;
+
+  -webkit-animation-fill-mode:forwards;
+  -moz-animation-fill-mode:forwards;
+  animation-fill-mode:forwards;
+
+  -webkit-animation-duration:1s;
+  -moz-animation-duration:1s;
+  animation-duration:1s;
+
+  -webkit-animation-delay:4.0s;
+  -moz-animation-delay:4.0s;
+  animation-delay:4.0s;
+}
+@-webkit-keyframes fadeIn {
+     from { 
+    opacity:0;
+    visibility:hidden;
+ } to { 
+     opacity:1;
+     visibility: visible; 
+} }
+@-moz-keyframes fadeIn { from { opacity:0; visibility: hidden } to { opacity:1; visibility: visible ;} }
+@keyframes fadeIn { from { opacity:0; visibility: hidden; } to { opacity:1; visibility: visible; } }
+
+    #hideMe {
+    -moz-animation: cssAnimation 0s ease-in-out 3.85s ;
+    /* Firefox */
+    -webkit-animation: cssAnimation 0s ease-in-out 3.85s ;
+    /* Safari and Chrome */
+    -o-animation: cssAnimation 0s ease-in-out 3.85s ;
+    /* Opera */
+    animation: cssAnimation 0s ease-in-out 3.85s ;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+}
+@keyframes cssAnimation {
+    
+    to {
+        width:0;
+        height:0;
+        opacity: 0;
+    }
+}
+@-webkit-keyframes cssAnimation {
+   
+    to {
+        width:0;
+        height:0;
+        opacity:0;
+    }
+}
+
+
+</style>
+
+</head>
+<body>
+ 
+
+  <div id='hideMe' class='animate fadeOut'><img src='assets/shortcountdown.gif'></div>
+       <div class="fade-in"> <div class="clock animated zoomOut"  ><span id="timer"></span></div></div>
+       <audio id="heartbeat" src="assets/Short321.wav"></audio>
+
+  
+    <script  src="js/index.js"></script>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js"></script>
+    <script type="text/javascript" src="js/cooltext.animations.js"></script>
+    <script type="text/javascript" src="js/cooltext.min.js"></script>
+
+</body>
+</html>
